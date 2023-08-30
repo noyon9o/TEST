@@ -29,6 +29,8 @@ int main()
         cout << T << en;
     else if (C > A && C > T && C > G)
         cout << C << en;
+    else if ( A == T && A == C && A == G)
+        cout << 0 << en;
     else
         cout << G << en;
     // cout << sz << en;
