@@ -18,7 +18,7 @@ int main()
             if (x % 2 != i % 2)
             {
                 if (i % 2 == 0)
-                {
+                { 
                     a++;
                 }
                 else
