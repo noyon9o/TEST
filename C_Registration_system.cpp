@@ -4,30 +4,41 @@ using namespace std;
 
 void solve()
 {
-    int n;
-    //cin >> n;
     map<int, string> mp;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     string s;
-    //     cin >> s;
-    // }
-    
 
+    mp.insert(pair<int, string>(1, "one"));
+
+    mp.insert(pair<int, string>(2, "two"));
+
+    cout << mp[1] << " " << mp[2] << endl;
+}
+
+void sol()
+{
+    int n;
+    cin >> n;
+    map<int, string> mu;
+    for (int i = 1; i <= n; i++)
+    {
+        string s;
+        cin >> s;
     
+            mu.insert(pair<int, string>(i, s));
+    }
+
+    for (int i = 1; i <= n; i++)
+    {
+
+
+
+        cout << i <<":" <<mu[i] << " ";
+    }
 }
 
 int main()
 {
-    solve();
 
-    map<int, string> sample_map;
-
-  sample_map.insert(pair<int, string>(1, "one"));
-
-  sample_map.insert(pair<int, string>(2, "two"));
-
-  cout << sample_map[1] << " " << sample_map[2] << endl;
+    sol();
 
   return false;
 }
