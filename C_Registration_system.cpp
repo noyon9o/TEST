@@ -28,10 +28,10 @@ void sol()
 
     for (int i = 1; i <= n; i++)
     {
+        
 
 
-
-        cout << i <<":" <<mu[i] << " ";
+        cout << i <<":" <<mu[i] << "\n";
     }
 }
 
