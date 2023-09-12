@@ -35,10 +35,23 @@ void sol()
     }
 }
 
-int main()
+map<string, int> m;
+string temp;
+void test(void)
 {
+    cin >> temp;
+    if (m[temp] == 0)
+        cout << "OK" << endl;
+    else
+        cout << temp << m[temp] << endl;
+    m[temp]++;
+}
 
-    sol();
-
-  return false;
+int main(void)
+{
+    int t;
+    cin >> t;
+    while (t--)
+        test();
+    return 0;
 }
