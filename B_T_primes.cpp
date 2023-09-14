@@ -1,48 +1,60 @@
-#include<bits/stdc++.h>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-bool isprime(int n)
-{
-    if(n <= 2)
-        return false;
-    for (int i = 2; i*i <= n; i++)
-    {
-        if(n%i == 0) 
-            return false;
-    }
-    return true;
-}
-void solve()
-{
-    long long int n;
-    cin >> n;
-    int cnt = 0;
-    for (int i = 1; i <= n; i++)
-    {
-        if(n%i == 0)
-            cnt++;
-        else 
-            continue;
-    }
-    if(cnt == 3)
-        cout << "YES\n";
-    else
-        cout << "NO\n";
+typedef long long int llint;
+typedef unsigned long long int ullint;
+typedef short int sint;
+#define endn "\n"
+#define umap unordered_map
+#define uset unordered_set
 
+#define M 1000000
+bitset<M> marks;
+uset<int> primes;
+
+void sieve(int n)
+{
+    for (int i = 2; i * i <= n; i++)
+    {
+        if (marks[i] == false)
+        {
+            for (int j = i + i; j <= n; j += i)
+            {
+                marks[j] = true;
+            }
+        }
+    }
+    for (int i = 2; i <= n; i++)
+    {
+        if (marks[i] == false)
+        {
+            primes.insert(i);
+        }
+    }
 }
 
 int main(void)
 {
-        int t;
-        cin >> t;
-        while (t--)
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    sieve(1e6);
+
+    int n;
+    cin >> n;
+    llint num;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> num;
+        llint root = sqrt(num);
+        if (primes.find(root) != primes.end() && root * root == num)
         {
-            solve();
+            cout << "YES" << endn;
         }
-        
-    // if(!(isprime(4)))
-    //     cout << "IT is";
-    // else
-    //     cout << "its not";
+        else
+        {
+            cout << "NO" << endn;
+        }
+    }
 }
