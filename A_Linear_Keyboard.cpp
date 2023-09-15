@@ -2,29 +2,34 @@
 
 using namespace std;
 
-void solve()
+#define umap unordered_map
+#define uset unordered_set
+#define pb push_back
+
+void test_case()
 {
-    string k, s;
-    getline(cin, k);
-    getline(cin, s);
-    int res = 0;
-
-    for (int i = 1; i < s.length(); i++)
+    string keys, words;
+    cin >> keys >> words;
+    umap<char, int> keys_mp;
+    for (int i = 0; i < 26; i++)
     {
-        int index1 = k.find(s[i]);
-        int index2 = k.find(s[i - 1]);
-        res += abs(index1 - index2);
+        keys_mp[keys[i]] = i + 1;
     }
-
-    cout << res << endl;
+    int len = words.length(), ans = 0;
+    for (int i = 1; i < len; i++)
+    {
+        ans += abs(keys_mp[words[i]] - keys_mp[words[i - 1]]);
+    }
+    cout << ans << "\n";
 }
 
 int main(void)
 {
+
     int t;
     cin >> t;
     while (t--)
-    {
-        solve();
-    }
+        test_case();
+
+    return 0;
 }
