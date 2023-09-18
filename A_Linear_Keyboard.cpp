@@ -33,3 +33,19 @@ int main(void)
 
     return 0;
 }
+
+/*
+        The Team Scientific Decathlon Olympias requires teams of three students.
+        The school teachers decided that the teams will be composed of three children that are good at different subjects.
+        That is, each team must have one mathematician, one programmer and one sportsman.
+        Of course, each child can be a member of no more than one team.
+
+        the team scientific decathalon olympias required teams of three students.
+        the school teachers decided that the teams will be composed of three children that are good at differebt subject.
+        that is each team must have one mathmatician one programmmer and one sportsman.
+        of course each children can be member of no more one team.
+
+        the team scientific decathalon olympias required teams of three students.
+        the school teachers decided that the teams will be composed of three children that are good at different subject.
+        of course each children can be member of no more one team.
+*/
