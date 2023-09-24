@@ -48,4 +48,13 @@ int main(void)
         the team scientific decathalon olympias required teams of three students.
         the school teachers decided that the teams will be composed of three children that are good at different subject.
         of course each children can be member of no more one team.
+
+        the team scientific decathalon olympias required teams of three students.
+        the school teachers decided that the teams will be compsed of three children that are good at differnt subject
+        the school teachers decided that the teams will be composed of three children that are good at differnt subject
+        the school teacher decided that the teams will be composed of three child   
+        
+        the school teachers decided that the teams will be compsed of three children that are good at differnt subject
+        of course each children can be member of no more one team.
+        
 */
