@@ -1,28 +1,33 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-
 void ex()
 {
-    int ar[4][2] = {3, 4, 3, 3, 3, 4, 3, 3};
+    int n, m;
+    cin >> n >> m;
+    int ar[n][m];
 
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < 2; j++)
+        for (int j = 0; j < m; j++)
+        {
+            cin >> ar[i][j];
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
         {
             cout << ar[i][j] << " ";
         }
-        
     }
-    
 }
-
 
 void solve()
 {
     int x = 1;
-    for (int i = 1; i <=4 ; i++)
+    for (int i = 1; i <= 4; i++)
     {
         for (int j = 1; j <= 4; j++)
         {
@@ -31,15 +36,57 @@ void solve()
         }
         cout << "\n";
     }
-    
 }
 
-int main(void)
+int main()
 {
-    // solve();
+    int n, m;
+    cin >> n >> m;
 
-    ex();
+    vector<vector<int>> matrix(n, vector<int>(m));
 
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cin >> matrix[i][j];
+        }
+    }
 
-    return false;
+    int top = 0, bottom = n - 1, left = 0, right = m - 1;
+
+    while (top <= bottom && left <= right)
+    {
+        for (int i = left; i <= right; i++)
+        {
+            cout << matrix[top][i] << " ";
+        }
+        top++;
+
+        for (int i = top; i <= bottom; i++)
+        {
+            cout << matrix[i][right] << " ";
+        }
+        right--;
+
+        if (top <= bottom)
+        {
+            for (int i = right; i >= left; i--)
+            {
+                cout << matrix[bottom][i] << " ";
+            }
+            bottom--;
+        }
+
+        if (left <= right)
+        {
+            for (int i = bottom; i >= top; i--)
+            {
+                cout << matrix[i][left] << " ";
+            }
+            left++;
+        }
+    }
+
+    return 0;
 }
