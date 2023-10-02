@@ -1,28 +1,29 @@
-#include<bits/stdc++.h>
-
+#include <bits/stdc++.h>
 using namespace std;
+typedef long long li;
+typedef long double lf;
 
-void solve()
+int main()
 {
-    int a, b, n;
-    cin >> a >> b >> n;
-    int ar[n];
-    for (int i = 0; i < n; i++)
+    li T;
+    cin >> T;
+    while (T--)
     {
-        cin >> ar[i];
+        li a , b, n;
+        cin >> a >> b >> n;
+        li ans = b - 1;
+        for (li i = 1; i <= n; i++)
+        {
+            li c;
+            cin >> c;
+            ans += min(c + 1, a) - 1;
+        }
+        cout << ans + 1 << endl;
     }
-    while (true)
-    {
-        
-    }
-    
+    return 0;
 }
 
-int main(void)
-{
-    solve();
-}
-
+// explanation --
 
 /*
     b = 3    lim -- 5
