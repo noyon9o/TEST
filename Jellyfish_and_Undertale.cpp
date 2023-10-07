@@ -16,7 +16,7 @@ int main()
         {
             li c;
             cin >> c;
-            ans += min(c + 1, a) - 1;
+            ans = ans + min(c + 1, a) - 1;
         }
         cout << ans + 1 << endl;
     }
